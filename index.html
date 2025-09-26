@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Srinithi Eswaran - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      font-family: 'Poppins', sans-serif;
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 1rem;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .skill-bar {
+      width: 0;
+      height: 10px;
+      background: #60a5fa;
+      border-radius: 9999px;
+      transition: width 2s ease-in-out;
+    }
+    .skill-bar-container {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 9999px;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body class="text-white">
+  <!-- Header -->
+  <header class="glass p-5 flex justify-between items-center">
+    <h1 class="text-2xl font-bold">Srinithi Eshwaran</h1>
+    <nav class="space-x-4">
+      <a href="#about" class="hover:underline">About</a>
+      <a href="#skills" class="hover:underline">Skills</a>
+      <a href="#projects" class="hover:underline">Projects</a>
+      <a href="#contact" class="hover:underline">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="flex flex-col items-center justify-center text-center min-h-screen">
+    <img src="photo2.jpg" alt="profile photo" class="rounded-full w-40 h-40 border-4 border-white shadow-lg" />
+    <h2 class="text-4xl font-bold mt-5">Hi, I'm Srinithi 👋</h2>
+    <p class="text-lg mt-3">Aspiring Software Developer | Web Enthusiast</p>
+    <a href="#contact" class="mt-5 px-6 py-2 bg-blue-500 rounded-lg shadow hover:bg-blue-600">Hire Me</a>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="glass m-10 p-8">
+    <h3 class="text-2xl font-bold mb-4">About Me</h3>
+    <p>
+      I’m a passionate developer skilled in modern web technologies. I love
+      building interactive and user-friendly web applications.
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="glass m-10 p-8">
+    <h3 class="text-2xl font-bold mb-6">Skills</h3>
+    <div class="space-y-4">
+      <div>
+        <p>HTML</p>
+        <div class="skill-bar-container">
+          <div class="skill-bar" data-skill="90%"></div>
+        </div>
+      </div>
+      <div>
+        <p>CSS</p>
+        <div class="skill-bar-container">
+          <div class="skill-bar" data-skill="85%"></div>
+        </div>
+      </div>
+      <div>
+        <p>JavaScript</p>
+        <div class="skill-bar-container">
+          <div class="skill-bar" data-skill="75%"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="glass m-10 p-8">
+    <h3 class="text-2xl font-bold mb-6">Projects</h3>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="p-4 bg-white/10 rounded-lg shadow">
+        <h4 class="font-bold">Portfolio Website</h4>
+        <p>A personal website showcasing my skills and projects.</p>
+      </div>
+      <div class="p-4 bg-white/10 rounded-lg shadow">
+        <h4 class="font-bold">Weather App</h4>
+        <p>Displays real-time weather using an external API.</p>
+      </div>
+      <div class="p-4 bg-white/10 rounded-lg shadow">
+        <h4 class="font-bold">Task Manager</h4>
+        <p>A simple app to track daily tasks efficiently.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="glass m-10 p-8">
+    <h3 class="text-2xl font-bold mb-6">Contact Me</h3>
+    <form id="contact-form" class="space-y-4">
+      <input type="text" name="name" placeholder="Your Name" class="w-full p-3 rounded-lg text-black" required />
+      <p class="text-red-400 hidden" data-error="name">Please enter your name</p>
+
+      <input type="email" name="email" placeholder="Your Email" class="w-full p-3 rounded-lg text-black" required />
+      <p class="text-red-400 hidden" data-error="email">Please enter a valid email</p>
+
+      <textarea name="message" placeholder="Your Message" class="w-full p-3 rounded-lg text-black" required></textarea>
+      <p class="text-red-400 hidden" data-error="message">Please enter a message</p>
+
+      <button type="submit" class="px-6 py-2 bg-green-500 rounded-lg hover:bg-green-600">
+        Send
+      </button>
+    </form>
+
+    <div class="mt-6">
+      <h4 class="font-bold">Quick Links</h4>
+      <p>
+        📧 <a href="mailto:srinithieswaran7@gmail.com" class="hover:underline">srinithieswaran7@gmail.com</a>
+      </p>
+      <p>
+        🌐 <a href="https://github.com/srinithi5" class="hover:underline" aria-label="GitHub Profile">srinithi5</a>
+      </p>
+      <p>
+        💼 <a href="https://www.linkedin.com/in/srinithi-eswaran-410055290?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="hover:underline" aria-label="LinkedIn Profile">Srinithi Eswaran</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center p-5 bg-black/40">
+    <p>&copy; 2025 Srinithi Eshwaran. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Skill bar animation
+    const skillBars = document.querySelectorAll('.skill-bar');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const bar = entry.target;
+          bar.style.width = bar.getAttribute('data-skill');
+        }
+      });
+    }, { threshold: 0.5 });
+    skillBars.forEach(bar => observer.observe(bar));
+
+    // Contact form validation
+    const form = document.getElementById('contact-form');
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      let isValid = true;
+      const formData = new FormData(form);
+
+      formData.forEach((value, name) => {
+        const p = form.querySelector(`[data-error="${name}"]`);
+        if (!value.trim()) {
+          p.classList.remove('hidden');
+          isValid = false;
+        } else {
+          p.classList.add('hidden');
+        }
+      });
+
+      if (isValid) {
+        alert('Message sent successfully!');
+        form.reset();
+      }
+    });
+  </script>
+</body>
+</html>
